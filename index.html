@@ -5,8 +5,142 @@
   <title>Trupti Mahajan | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of textile and surface pattern designer Trupti Mahajan">
-  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      padding: 40px 30px;
+      border-right: 1px solid #eaeaea;
+    }
+
+    .sidebar h1 {
+      font-size: 24px;
+      margin-bottom: 40px;
+      font-weight: normal;
+    }
+
+    .sidebar nav a,
+    .sidebar nav span {
+      display: block;
+      text-decoration: none;
+      color: #555;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .sidebar nav span {
+      margin-top: 24px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .sidebar nav a:hover {
+      color: #000;
+    }
+
+    /* Main content */
+    .content {
+      flex: 1;
+      padding: 70px 80px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero h2 {
+      font-size: 34px;
+      font-weight: normal;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 12px;
+      line-height: 1.7;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .hero .hero-sub {
+      font-style: italic;
+      color: #777;
+      margin-top: 18px;
+    }
+
+    /* About */
+    .about {
+      max-width: 720px;
+      margin: 0 auto 70px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+      text-align: center;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
+    }
+
+    .grid a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .grid img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid span {
+      display: block;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .content {
+        padding: 40px 25px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="layout">
@@ -16,7 +150,7 @@
     <h1>Trupti Mahajan</h1>
     <nav>
       <a href="index.html">About me</a>
-      <span class="nav-title">Work</span>
+      <span>Work</span>
       <a href="saree-print.html">Saree print design</a>
       <a href="lippan-art.html">Lippan art tiles</a>
       <a href="warli-tile.html">Warli tile surface print</a>
@@ -26,20 +160,48 @@
   <!-- Main Content -->
   <main class="content">
 
+    <!-- Hero -->
     <section class="hero">
-      <h2>Hi, I’m Trupti Mahajan!</h2>
-      <p>Scroll down to see my work</p>
+      <h2>Hi, I’m Trupti Mahajan</h2>
+      <p>
+        I am a textile and surface pattern designer exploring traditional Indian art
+        forms through contemporary design practices.
+      </p>
+      <p>
+        My work focuses on transforming hand-crafted techniques into modern applications
+        across textiles and architectural surfaces.
+      </p>
+      <p class="hero-sub">
+        Scroll down to explore selected works
+      </p>
     </section>
 
+    <!-- About -->
+    <section class="about">
+      <p>
+        My design process is rooted in research, cultural understanding, and material
+        exploration. I work with hand painting, motif development, repetition, and surface
+        translation to create designs that balance tradition and modernity. Through my
+        projects, I aim to preserve indigenous art forms while adapting them to contemporary
+        visual language.
+      </p>
+    </section>
+
+    <!-- Work Grid -->
     <section class="grid">
       <a href="saree-print.html">
-        <img src="assets/saree/saree1.jpg" alt="Saree design">
+        <img src="assets/img11.jpeg" alt="Saree print design">
+        <span>Saree Print Design</span>
       </a>
+
       <a href="lippan-art.html">
-        <img src="assets/lippan/lippan1.jpg" alt="Lippan art tile">
+        <img src="assets/img13.jpeg" alt="Lippan art tiles">
+        <span>Lippan Art Tiles</span>
       </a>
+
       <a href="warli-tile.html">
-        <img src="assets/warli/warli1.jpg" alt="Warli tile design">
+        <img src="assets/img2.jpeg" alt="Warli tile surface print">
+        <span>Warli Tile Surface Print</span>
       </a>
     </section>
 
